@@ -1,12 +1,12 @@
-package basics
+package homework1
 
-import basics.Basics.{gcd, lcm}
+import homework1.LcmAndGcd.{gcd, lcm}
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers.convertToAnyShouldWrapper
 import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
 
-class BasicsSpec extends AnyFlatSpec with ScalaCheckDrivenPropertyChecks {
+class LcmAndGcdTest extends AnyFlatSpec with ScalaCheckDrivenPropertyChecks {
 
   "lcm method" should "return lowest common multiple for two integers" in {
     lcm(35, 15) shouldEqual 105
