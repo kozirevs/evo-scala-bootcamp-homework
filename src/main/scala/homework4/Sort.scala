@@ -18,8 +18,7 @@ object Sort {
   // output `List(Set("e") -> 0, Set("a", "d") -> 1, Set("b", "f", "g") -> 2, Set("c") -> 4)`.
   def sortConsideringEqualValues[T](map: Map[T, Int]): List[(Set[T], Int)] = {
     map.groupBy({ case (_, v) => v })
-      .map { case (k, v) => (v.keySet, k) }
       .toList
-      .sortBy { case (_, i) => i }
+      .map { case (k, v) => (v.keySet, k) }
   }
 }

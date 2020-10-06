@@ -31,8 +31,8 @@ object Calculator {
   def parseCommand(x: String): Either[ErrorMessage, Command] = {
     val input = x.split(" ").toList.filterNot(_.isEmpty)
     input match {
-      case x if x.size < 3 => Left(ErrorMessage("Not enough parameters"))
-      case _ :: x if x.size != x.map(_.toDoubleOption).filterNot(_.isEmpty).size => Left(ErrorMessage("Can't parse"))
+      case x if x.size < 2 => Left(ErrorMessage("Not enough parameters"))
+      case _ :: x if x.map(_.toDoubleOption).contains(None) => Left(ErrorMessage("Couldn't parse"))
       case x :: xs if x == "divide" => xs match {
         case _ if xs.size != 2 => Left(ErrorMessage("Parameters should be two"))
         case _ => Right(Divide(xs.head.toDouble, xs.tail.head.toDouble))
