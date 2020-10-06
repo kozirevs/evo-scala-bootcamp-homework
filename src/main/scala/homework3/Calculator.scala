@@ -62,9 +62,9 @@ object Calculator {
     x match {
       case DivideResult(dividend, divisor, value) => s"$dividend divided by $divisor is ${value.formatted("%.2f")}"
       case SumResult(numbers, value) => s"the sum of ${numbers.mkString(" ")} is $value"
-      case AverageResult(numbers, value) => s"the average of ${numbers.mkString(" ")} is $value"
-      case MinResult(numbers, value) => s"the min of ${numbers.mkString(" ")} is $value"
-      case MaxResult(numbers, value) => s"the max of ${numbers.mkString(" ")} is $value"
+      case AverageResult(numbers, value) => s"the average of ${numbers.mkString(" ")} is ${value.formatted("%.3f")}"
+      case MinResult(numbers, value) => s"the minimum of ${numbers.mkString(" ")} is $value"
+      case MaxResult(numbers, value) => s"the maximum of ${numbers.mkString(" ")} is $value"
     }
   }
 
