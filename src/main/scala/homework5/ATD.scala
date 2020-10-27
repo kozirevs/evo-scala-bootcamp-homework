@@ -27,55 +27,55 @@ object ATD {
   }
   object Rank {
     final case object Two extends Rank {
-      override def rankValue: RankValue = RankValue.create(2).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(2).get
       override def abbreviation: Char = '2'
     }
     final case object Three extends Rank {
-      override def rankValue: RankValue = RankValue.create(3).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(3).get
       override def abbreviation: Char = '3'
     }
     final case object Four extends Rank {
-      override def rankValue: RankValue = RankValue.create(4).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(4).get
       override def abbreviation: Char = '4'
     }
     final case object Five extends Rank {
-      override def rankValue: RankValue = RankValue.create(5).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(5).get
       override def abbreviation: Char = '5'
     }
     final case object Six extends Rank {
-      override def rankValue: RankValue = RankValue.create(6).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(6).get
       override def abbreviation: Char = '6'
     }
     final case object Seven extends Rank {
-      override def rankValue: RankValue = RankValue.create(7).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(7).get
       override def abbreviation: Char = '7'
     }
     final case object Eight extends Rank {
-      override def rankValue: RankValue = RankValue.create(8).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(8).get
       override def abbreviation: Char = '8'
     }
     final case object Nine extends Rank {
-      override def rankValue: RankValue = RankValue.create(9).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(9).get
       override def abbreviation: Char = '9'
     }
     final case object Ten extends Rank {
-      override def rankValue: RankValue = RankValue.create(10).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(10).get
       override def abbreviation: Char = 'T'
     }
     final case object Jack extends Rank {
-      override def rankValue: RankValue = RankValue.create(11).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(11).get
       override def abbreviation: Char = 'J'
     }
     final case object Queen extends Rank {
-      override def rankValue: RankValue = RankValue.create(12).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(12).get
       override def abbreviation: Char = 'Q'
     }
     final case object King extends Rank {
-      override def rankValue: RankValue = RankValue.create(13).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(13).get
       override def abbreviation: Char = 'K'
     }
     final case object Ace extends Rank {
-      override def rankValue: RankValue = RankValue.create(14).getOrElse(None)
+      override def rankValue: RankValue = RankValue.create(14).get
       override def abbreviation: Char = 'A'
     }
   }
@@ -113,34 +113,34 @@ object ATD {
   }
   object PokerCombination {
     final case object HighCard extends PokerCombination {
-      override def combinationValue: CombinationValue = CombinationValue.create(1).getOrElse(None)
+      override def combinationValue: CombinationValue = CombinationValue.create(1).get
     }
     final case object Pair extends PokerCombination {
-      override def combinationValue: CombinationValue = CombinationValue.create(2).getOrElse(None)
+      override def combinationValue: CombinationValue = CombinationValue.create(2).get
     }
     final case object TwoPair extends PokerCombination {
-      override def combinationValue: CombinationValue = CombinationValue.create(3).getOrElse(None)
+      override def combinationValue: CombinationValue = CombinationValue.create(3).get
     }
     final case object Set extends PokerCombination {
-      override def combinationValue: CombinationValue = CombinationValue.create(4).getOrElse(None)
+      override def combinationValue: CombinationValue = CombinationValue.create(4).get
     }
     final case object Straight extends PokerCombination {
-      override def combinationValue: CombinationValue = CombinationValue.create(5).getOrElse(None)
+      override def combinationValue: CombinationValue = CombinationValue.create(5).get
     }
     final case object Flush extends PokerCombination {
-      override def combinationValue: CombinationValue = CombinationValue.create(6).getOrElse(None)
+      override def combinationValue: CombinationValue = CombinationValue.create(6).get
     }
     final case object FullHouse extends PokerCombination {
-      override def combinationValue: CombinationValue = CombinationValue.create(7).getOrElse(None)
+      override def combinationValue: CombinationValue = CombinationValue.create(7).get
     }
     final case object FourOfAKind extends PokerCombination {
-      override def combinationValue: CombinationValue = CombinationValue.create(8).getOrElse(None)
+      override def combinationValue: CombinationValue = CombinationValue.create(8).get
     }
     final case object StraightFlush extends PokerCombination {
-      override def combinationValue: CombinationValue = CombinationValue.create(9).getOrElse(None)
+      override def combinationValue: CombinationValue = CombinationValue.create(9).get
     }
     final case object RoyalFlush extends PokerCombination {
-      override def combinationValue: CombinationValue = CombinationValue.create(10).getOrElse(None)
+      override def combinationValue: CombinationValue = CombinationValue.create(10).get
     }
   }
 
